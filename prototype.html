@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js封装</title>
+</head>
+<body>
+        js封装
+
+    <script type="text/javascript">
+
+        //creat 构造函数
+        function cat(name,color) {
+            this.name=name;
+            this.color=color;
+
+        }
+        cat.prototype.type="猫科动物";
+        cat.prototype.eat =function () {
+            alert("抓老鼠");
+        };
+
+        //实例化构造函数
+        var cat1= new cat("大猫","白色");
+        var cat2= new  cat("小猫","红色");
+        //alert(cat1.color+cat1.name+cat1.type);
+        //alert(cat2.color+cat2.name+cat2.type);
+        //alert(cat1.eat==cat2.eat);
+        alert(cat.prototype.isPrototypeOf(cat1));
+    </script>
+</body>
+</html>
